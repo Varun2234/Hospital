@@ -35,7 +35,7 @@ app.use("/api/services", servicesRoutes);
 app.use("/api/payment", paymentRoutes);
 app.use("/api/disease", predictRoutes);
 
-if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV === "development") {
   const clientBuildPath = path.join(__dirname, "..", "client", "dist");
   app.use(express.static(clientBuildPath));
 
